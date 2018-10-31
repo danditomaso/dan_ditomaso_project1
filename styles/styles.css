@@ -231,10 +231,9 @@ input[type="checkbox"]:checked ~ .navOverlay {
     0%   {transform: translateX(-100%)}
     100%   {transform: translateX(0%)}
 }
-input[type="checkbox"]:not(:checked) ~ .navOverlay,input[type="checkbox"]:checked + .navMenuMobile {
+input[type="checkbox"]:not(:checked) ~ .navOverlay, input[type="checkbox"]:checked + .navMenuMobile {
     display: none;
 }
-
 input[type="checkbox"]:not(:checked) .navMenuMobile {
     display: block;
 }
