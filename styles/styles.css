@@ -10,6 +10,7 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}h1{font-size:2
 :root {
   --accent-color: #8dd7e9;
   --solid-white: #ffffff;
+  --solid-black: #000000;
   --background-color: #215a6d;
   --black-shade: #0f0f0f;
   --input-field-black: #232323;
@@ -53,9 +54,6 @@ a {
     color: var(--accent-color);
     text-decoration: none;
 }
-a:visited {
-    color: var(--accent-color);
-}
 /* Removing Default Styles END */
 /* Wrapper START */
 .wrapper {
@@ -71,6 +69,10 @@ h1,h2,h3,h4,input[type="button"],input[type="submit"]{
     font-weight: 700;
     text-transform: uppercase;
 }
+input {
+    transition: all 0.3s ease-in-out;
+    color: var(--input-field-black);
+}
 input[type="button"],input[type="email"],input[type="submit"]{
     padding: 1rem 2rem;
     background: var(--accent-color);
@@ -80,21 +82,25 @@ input[type="button"],input[type="email"],input[type="submit"]{
     cursor: pointer;
 }
 input[type="email"] {
-    cursor: text;
-}
-input[type="email"] {
     font-family: "Noto Sans", sans-serif;
     font-weight: 400;
     font-size: 1.8rem;
-    color: var(--input-field-black);
     background: var(--white-shade);
     text-transform: lowercase;
     display: inline-block;
     width: 65%;
     margin: 1rem 0;
+    cursor: text;
 }
 input[type="button"] {
     margin: 2rem 0 0 0;
+}
+input[type="button"]:hover,input[type="submit"]:hover {
+ /* box-shadow: 18px 0px 11px -16px rgba(0,0,0,0.75); */
+    background: var(--solid-black);
+    color: var(--accent-color);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+ 
 }
 h1,h2,h3 {
     color: var(--black-shade);
@@ -139,11 +145,11 @@ h4 {
 }
 .sectionContainer p,.packing p, .peakPhotos p {
     margin-top: 1.5rem; 
-    min-height: 50%;
+    /* min-height: 50%; */
 }
 .sectionContainer {
     padding: 6rem 0;
-    min-height: 50%;
+    /* min-height: 50%; */
 }
 /* General Styles END */
 /* Header START */
@@ -166,12 +172,11 @@ nav li {
     transition: transform 0.3s ease;
 }
 nav li:hover {
-    transform: scale(1.5);
+    transform: scale(1.2);
     transform-origin: left;
 }
 .navOverlay {
     position: fixed;
-    z-index: 10;
     top: 0;
     left: 0;
     bottom: 0;
@@ -179,12 +184,14 @@ nav li:hover {
     background: rgba(0, 0, 0, 0.8);
     float: none;
     display: none;
+    z-index: 40;
 }
 .navOverlay .far {
     position: absolute;
     top: 5%;
     right: 5%;
     font-size: 3.5rem;
+    cursor: pointer;
 }
 .navOverlay li {
     display: block;
@@ -192,6 +199,11 @@ nav li:hover {
     padding: 1.5rem 0;
     line-height: 0;
     font-size: 10rem;
+    color: var(--solid-white);
+    cursor: pointer;
+}
+.navOverLay li:visited {
+    color: var(--solid-white);
 }
 .navOverlay li:hover {
     transform: none;
@@ -204,11 +216,27 @@ nav li:hover {
 .navMenuMobile {
     display: none;
 }
-input[type="checkbox"]:checked .navOverlay {
-    display: block;
-}
-input[type="checkbox"]:not(:checked) .navOverlay  {
+input#checkbox-toggle {
     display: none;
+}
+input[type="checkbox"]:checked ~ .navOverlay { 
+    display: block;
+    /* animation-name: slideIn;
+    animation-duration: .7s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.11,1.26,.52,1.35); */
+}
+
+@keyframes slideIn {
+    0%   {transform: translateX(-100%)}
+    100%   {transform: translateX(0%)}
+}
+input[type="checkbox"]:not(:checked) ~ .navOverlay,input[type="checkbox"]:checked + .navMenuMobile {
+    display: none;
+}
+
+input[type="checkbox"]:not(:checked) .navMenuMobile {
+    display: block;
 }
 
 .logoContainer {
@@ -391,9 +419,12 @@ input[type="checkbox"]:not(:checked) .navOverlay  {
 .copyrightText a {
     color: var(--white-shade);
 }
+
+
 /* Breakpoints START */
-/* Portrait tablet and small desktops */
+/* That's a 20 footer */
 @media (max-width: 1280px) {
+    /* About Me Section START */
     .aboutMe .innerText, .aboutMe .innerPhoto {
         float: none;
         padding: 0; 
@@ -410,6 +441,8 @@ input[type="checkbox"]:not(:checked) .navOverlay  {
     .aboutMe h2 {
         text-align: center;
     }
+    /* About Me Section END */
+    /* Footer Section START */
     .footer40Container input {
         width: 100%;
         margin: 0;
@@ -420,7 +453,7 @@ input[type="checkbox"]:not(:checked) .navOverlay  {
     /* Footer Section END */
   
 }
-
+/* You heard'em slow ahead */
 @media (max-width: 1032px) {
     /* Header Section START */
     .navMenuDesktop {
@@ -463,6 +496,7 @@ input[type="checkbox"]:not(:checked) .navOverlay  {
     }
     /* Footer Section END */
 }
+/* We're going to need a bigger boat */
 @media (max-width: 948px) {
     /* Header Section START */
     .navMenuDesktop {
@@ -488,6 +522,7 @@ input[type="checkbox"]:not(:checked) .navOverlay  {
     .peakPhotos .innerText {
         width: 100%;
         margin: 0 auto;
+        padding-bottom: 2rem;
     }
     /* Peak Photos Section END */
     /* Packing Essentials Section START */
@@ -496,11 +531,14 @@ input[type="checkbox"]:not(:checked) .navOverlay  {
     }
     .packing .innerPhoto {
         width: 100%;
+        margin: 0;
         margin-bottom: 2rem;
     }   
     .packing .innerText {
         width: 100%;
-        margin:  auto;
+        margin: 0 auto;
+        
+        padding-bottom: 2rem;
     }
     /* Packing Essentials Section END */
     /* About Me Section START */
@@ -514,11 +552,10 @@ input[type="checkbox"]:not(:checked) .navOverlay  {
     .footer60Container {
         width: 80%;
     }
-    /* About Me Section END */
-    
+    /* Footer Section END */
 }
 
-/* Landscape phone to portrait tablet */
+/* Ok, I guess you have a decent sized device */
 @media (max-width: 786px) {
     /* Header Section START */
    .navMenuDesktop {
@@ -544,8 +581,6 @@ input[type="checkbox"]:not(:checked) .navOverlay  {
         display: block;
     }
     /* Header Section END */
-   
-    /* Packing Essentials Section END */
     /* About Me Section START */
     .aboutMe .innerPhoto {
         margin: 0 auto;
@@ -591,9 +626,10 @@ input[type="checkbox"]:not(:checked) .navOverlay  {
         width: 25%;
         margin: 0 auto;
     }
-
+    /* Footer Section END */
 }
 @media (max-width: 652px) {
+    /* Navigation Section START */
     .navigation {
         padding: 1rem;
     }
@@ -606,15 +642,22 @@ input[type="checkbox"]:not(:checked) .navOverlay  {
     .navigation li:nth-of-type(2) {
         margin: 0 1rem;
     }
-  
+    /* Navigation Section END */
 }
-/* Landscape phones and down */
+/* Really small phones and down */
 @media (max-width: 420px) {
-     .contactContainer .textWrapper {
+    .largerMainTitle {
+        font-size: 6rem;
+    }
+     .navMenuMobile {
+        top: 8%;
+        right: 0;
+    }
+    .contactContainer .textWrapper {
         width: 50%;
         margin: 0 auto;
     }
-
-    
-  
+    .copyrightContainer {
+        margin-left: 2rem;
+    }
 }
