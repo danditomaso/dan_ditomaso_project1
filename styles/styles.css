@@ -221,10 +221,10 @@ input#checkbox-toggle {
 }
 input[type="checkbox"]:checked ~ .navOverlay { 
     display: block;
-    /* animation-name: slideIn;
+    animation-name: slideIn;
     animation-duration: .7s;
     animation-fill-mode: forwards;
-    animation-timing-function: cubic-bezier(.11,1.26,.52,1.35); */
+    animation-timing-function: cubic-bezier(.11,1.26,.52,1.35);
 }
 
 @keyframes slideIn {
