@@ -1,205 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Summit - Project 1</title>
-    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.4.1/css/all.css' integrity='sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz'
-        crossorigin='anonymous'>
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Poppins:700" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/styles.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Poppins:700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
 
-<body>
+  <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
     <header id="home">
-        <div class="wrapper clearfix">
-            <nav>
-                <input type="checkbox" id="checkbox-toggle">
-                <div class="navMenuMobile">
-                    <label for="checkbox-toggle">
-                        <i class="fa fa-bars fa-3x"></i>
-                    </label>
-                </div>
-                <div class="navMenuDesktop">
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#peakPhotos">Blog</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="navOverlay">
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#peakPhotos">Blog</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                    <label for="checkbox-toggle">
-                        <i id="checkbox-toggle" class="far fa-times-circle"></i>
-                    </label>
-                </div>
-            </nav>
-            <div class="logoContainer">
-                <h2>Summit</h2>
-            </div>
-            <div class="mainTitleContainer">
-                <h1>Welcome to <span class="largerMainTitle">Summit</span></h1>
-            </div>
-            <div class="socialContainer">
-                <ul>
-                    <li><a href="//facebook.com" target="_blank"><i class="fab fa-facebook-f"></a></i></li>
-                    <li><a href="//instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="//linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                    <li><a href="//twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                </ul>
-            </div>
+      <div fadeIn class="wrapper clearfix">
+        <nav>
+          <input type="checkbox" id="checkbox-toggle" />
+          <div class="navMenuMobile">
+            <label for="checkbox-toggle">
+              <i class="fa fa-bars fa-3x"></i>
+            </label>
+          </div>
+          <div class="navMenuDesktop">
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#peakPhotos">Blog</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="navOverlay">
+            <ul class="navOverlay-container">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#peakPhotos">Blog</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+            <label for="checkbox-toggle">
+              <i id="checkbox-toggle" class="far fa-times-circle"></i>
+            </label>
+          </div>
+        </nav>
+        <div class="logoContainer">
+          <h2>Summit</h2>
         </div>
-
+        <div
+          data-aos="fade-asdfsaf"
+          data-aos-duration="3000"
+          class="mainTitleContainer"
+        >
+          <h1>Welcome to <span class="largerMainTitle">Summit</span></h1>
+        </div>
+        <div class="socialContainer">
+          <ul>
+            <li>
+              <a
+                href="https://facebook.com"
+                target="https://www.facebook.com/thisishackeryou/"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://instagram.com"
+                target="https://www.instagram.com/thisishackeryou/"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://linkedin.com"
+                target="https://www.linkedin.com/school/hackeryou"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://twitter.com"
+                target="https://twitter.com/hackeryou"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
     <main class="clearfix" id="maincontent">
-        <section class="sectionContainer about" id="about">
-            <div class="wrapper clearfix">
-                <div class="innerText">
-                    <h2>About Summit</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A commodi nemo ab minima rerum itaque
-                        fugit distinctio animi nam incidunt quod placeat iure facilis molestiae earum harum aliquid,
-                        provident vitae?</p>
-                    <input type="button" value="Find Out More" class="btn">
-                </div>
-        </section>
+      <section class="sectionContainer about" id="about">
+        <div class="wrapper clearfix">
+          <div class="innerText">
+            <h2>About Summit</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. A commodi
+              nemo ab minima rerum itaque fugit distinctio animi nam incidunt
+              quod placeat iure facilis molestiae earum harum aliquid, provident
+              vitae?
+            </p>
+            <input type="button" value="Find Out More" class="btn" />
+          </div>
         </div>
-        <section class="peakPhotos clearfix" id="peakPhotos">
-            <figure class="innerPhoto">
-                <img src="./assets/image-2.jpg" srcset="./assets/image-2@2x.jpg 2x, ./assets/image-2@3x.jpg 3x" alt="A snow topped volcanic mountain top with a tree on the left side of the image in the foreground.">
-            </figure>
-            <div class="innerText">
+      </section>
+      <section class="peakPhotos clearfix" id="peakPhotos">
+        <figure class="innerPhoto">
+          <img
+            src="./assets/image-2.jpg"
+            srcset="./assets/image-2@2x.jpg 2x, ./assets/image-2@3x.jpg 3x"
+            alt="A snow topped volcanic mountain top with a tree on the left side of the image in the foreground."
+          />
+        </figure>
+        <div class="innerText">
+          <div class="textWrapper">
+            <h3>Peak Photos</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Exercitationem, perferendis. Cum, eveniet officia voluptates porro
+              ullam ducimus in? Minima illo architecto qui reprehenderit sint
+              blanditiis magnam quo? Voluptate, esse autem.
+            </p>
+          </div>
+          <input type="button" value="Read More" class="btn" />
+        </div>
+      </section>
+      <section class="packing clearfix">
+        <div class="innerPhoto">
+          <img
+            src="./assets/image-3.jpg"
+            srcset="./assets/image-3@2x.jpg 2x, ./assets/image-3@3x.jpg 3x"
+            alt="A picture from a window on a plane looking down onto a mountainous range below. The airplane wing is also partly in view as well."
+          />
+        </div>
+        <div class="innerText">
+          <div class="textWrapper">
+            <h3>Packing Essentials</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              cupiditate ea corrupti in modi blanditiis alias, repellendus porro
+              saepe at, fugiat natus distinctio rem debitis eligendi quis
+              accusantium sunt qui?
+            </p>
+          </div>
+          <input type="button" value="Read More" class="btn" />
+        </div>
+      </section>
+      <section class="navigation">
+        <div class="wrapper">
+          <ul>
+            <li>
+              <a href="#photos"><span class="fa fa-image"></span>Gallery</a>
+            </li>
+            <li>
+              <a href="#about"><span class="fa fa-user"></span>About</a>
+            </li>
+            <li>
+              <a href="#contact"><span class="fa fa-envelope"></span>Contact</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="sectionContainer aboutMe">
+        <div class="wrapper clearfix">
+          <div class="innerPhoto">
+            <img
+              src="./assets/image-4.jpg"
+              alt="A women smiling at the camera wearing a blue jean shirt, she is cast in the last glimmers of the late evening sun."
+            />
+          </div>
+          <div class="innerText">
+            <h2>About Me</h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+              saepe laborum itaque facere error voluptatibus deserunt alias unde
+              aspernatur illum. Ea cumque, necessitatibus corrupti temporibus
+              doloremque suscipit. Nihil earum, vero in deserunt, impedit
+              molestiae ab corrupti error soluta ipsum corporis doloribus
+              veniam, dolorem tempora iste labore animi quidem quis ut rem
+              similique. Iusto est quod maiores nemo, dolores labore quae
+              quibusdam natus iure qui repellat aliquid error fugiat
+              perspiciatis doloremque aliquam sunt, non asperiores minus
+              cupiditate! Saepe, tempore quisquam neque, quos voluptatem rerum
+              dolorum alias officia optio odit aut ea quas praesentium tenetur
+              fuga! Quod odit accusamus incidunt a architecto.
+            </p>
+            <input type="button" value="Find Out More" class="btn" />
+          </div>
+        </div>
+      </section>
+      <section class="sectionContainer photoGallery" id="photos">
+        <div class="wrapper clearfix">
+          <div class="photoItem">
+            <img
+              src="./assets/image-5.jpg"
+              srcset="./assets/image-5@2x.jpg 2x, ./assets/image-5@3x.jpg 3x"
+              alt="Picture of lots of trees with a mountain range in the background and several clouds in the sky above the valley."
+            />
+          </div>
+          <div class="photoItem">
+            <img
+              src="./assets/image-6.jpg"
+              srcset="./assets/image-6@2x.jpg 2x, ./assets/image-6@3x.jpg 3x"
+              alt="A snow covered mountain range is the primary item in the photo"
+            />
+          </div>
+          <div class="photoItem">
+            <img
+              src="./assets/image-7.jpg"
+              srcset="./assets/image-7@2x.jpg 2x, ./assets/image-7@3x.jpg 3x"
+              alt="A snow covered mountain range is the primary item in the photo"
+            />
+          </div>
+        </div>
+      </section>
+      <footer>
+        <section class="sectionContainer footer">
+          <div class="wrapper clearfix">
+            <div class="footer40Container">
+              <form action="POST" class="formContainer">
+                <h4>Stay Updated</h4>
+                <p>Subscribe to our newsletter for updates.</p>
+                <input type="email" placeholder="email address" />
+                <input type="submit" name="subscribe" value="subscribe" />
+              </form>
+            </div>
+            <div class="footer60Container">
+              <address class="contactContainer" id="contact">
                 <div class="textWrapper">
-                    <h3>Peak Photos</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, perferendis. Cum,
-                        eveniet officia voluptates porro ullam ducimus in? Minima illo architecto qui reprehenderit
-                        sint blanditiis magnam quo? Voluptate, esse autem.</p>
+                  <h4>Contact</h4>
+                  <p>
+                    info@email.com 123 - 456 - 7890 123 some road, Toronto, ON
+                  </p>
                 </div>
-                <input type="button" value="Read More" class="btn">
-            </div>
-        </section>
-        <section class="packing clearfix">
-            <div class="innerPhoto">
-                <img src="./assets/image-3.jpg" srcset="./assets/image-3@2x.jpg 2x, ./assets/image-3@3x.jpg 3x" alt="A picture from a window on a plane looking down onto a mountainous range below. The airplane wing is also partly in view as well.">
-            </div>
-            <div class="innerText">
-                <div class="textWrapper">
-                    <h3>Packing Essentials</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam cupiditate ea corrupti in
-                        modi
-                        blanditiis alias, repellendus porro saepe at, fugiat natus distinctio rem debitis eligendi
-                        quis
-                        accusantium sunt qui?</p>
-                </div>
-                <input type="button" value="Read More" class="btn">
-            </div>
-        </section>
-        <section class="navigation">
-            <div class="wrapper">
+              </address>
+              <div class="footerNav">
+                <h4>Pages</h4>
                 <ul>
-                    <li><span><a href="#photos"><span class="fa fa-image"></span>Gallery</a></li>
-                    <li><span></span><a href="#about"><span class="fa fa-user"></span>About</a></li>
-                    <li><span></span><a href="#contact"><span class="fa fa-envelope"></span>Contact</a></li>
+                  <li>Home</li>
+                  <li>About</li>
+                  <li>Blog</li>
+                  <li>Contact</li>
                 </ul>
-            </div>
-        </section>
-        <section class="sectionContainer aboutMe">
-            <div class="wrapper clearfix">
-                <div class="innerPhoto">
-                    <img src="./assets/image-4.jpg" alt="A women smiling at the camera wearing a blue jean shirt, she is cast in the last glimmers of the late evening sun.">
-                </div>
-                <div class="innerText">
-                    <h2>About Me</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti saepe laborum itaque
-                        facere
-                        error voluptatibus deserunt alias unde aspernatur illum. Ea cumque, necessitatibus corrupti
-                        temporibus doloremque suscipit. Nihil earum, vero in deserunt, impedit molestiae ab
-                        corrupti
-                        error soluta ipsum corporis doloribus veniam, dolorem tempora iste labore animi quidem quis
-                        ut
-                        rem similique. Iusto est quod maiores nemo, dolores labore quae quibusdam natus iure qui
-                        repellat aliquid error fugiat perspiciatis doloremque aliquam sunt, non asperiores minus
-                        cupiditate! Saepe, tempore
-                        quisquam neque, quos voluptatem rerum dolorum alias officia optio odit aut ea quas
-                        praesentium
-                        tenetur fuga! Quod odit accusamus incidunt a architecto.</p>
-                    <input type="button" value="Find Out More" class="btn">
-                </div>
-            </div>
-        </section>
-        <section class="sectionContainer photoGallery" id="photos">
-            <div class="wrapper clearfix">
-                <div class="photoItem">
-                    <img src="./assets/image-5.jpg" srcset="./assets/image-5@2x.jpg 2x, ./assets/image-5@3x.jpg 3x" alt="Picture of lots of trees with a mountain range in the background and several clouds in the sky above the valley.">
-                </div>
-                <div class="photoItem">
-                    <img src="./assets/image-6.jpg" srcset="./assets/image-6@2x.jpg 2x, ./assets/image-6@3x.jpg 3x" alt="A snow covered mountain range is the primary item in the photo">
-                </div>
-                <div class="photoItem">
-                    <img src="./assets/image-7.jpg" srcset="./assets/image-7@2x.jpg 2x, ./assets/image-7@3x.jpg 3x" alt="A snow covered mountain range is the primary item in the photo">
-                </div>
-            </div>
-            </div>
-        </section>
-        <footer>
-            <section class="sectionContainer footer">
-                <div class="wrapper clearfix">
-                    <div class="footer40Container">
-                        <form action="POST" class="formContainer">
-                            <h4>Stay Updated</h4>
-                            <p>Subscribe to our newsletter for updates.</p>
-                            <input type="email" placeholder="email address">
-                            <input type="submit" name="subscribe" value="subscribe">
-                        </form>
-                    </div>
-                    <div class="footer60Container">
-                        <address class="contactContainer" id="contact">
-                            <div class="textWrapper">
-                                <h4>Contact</h4>
-                                <p>
-                                    info@email.com
-                                    123 - 456 - 7890
-                                    123 some road,
-                                    Toronto, ON
-                                </p>
-                            </div>
-                        </address>
-                        <div class="footerNav">
-                            <h4>Pages</h4>
-                            <ul>
-                                <li>Home</li>
-                                <li>About</li>
-                                <li>Blog</li>
-                                <li>Contact</li>
-                            </ul>
-                        </div>
+              </div>
 
-                        <div class="footerNav">
-                            <h4>Recent Photos</h4>
-                            <ul>
-                                <li>Climbing Tips</li>
-                                <li>Photography Guide</li>
-                                <li>Top Mountains</li>
-                                <li>Everest</li>
-                            </ul>
-                        </div>
-                    </div>
-            </section>
-            <section class="copyrightContainer">
-                <a href="//hackeryou.com">
-                    <p class="copyrightText">Copyright &copy; 2018 HackerYou</p>
-                </a>
-            </section>
-
-        </footer>
+              <div class="footerNav">
+                <h4>Recent Photos</h4>
+                <ul>
+                  <li>Climbing Tips</li>
+                  <li>Photography Guide</li>
+                  <li>Top Mountains</li>
+                  <li>Everest</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="copyrightContainer">
+          <a href="https://www.hackeryou.com">
+            <p class="copyrightText">Copyright &copy; 2018 HackerYou</p>
+          </a>
+        </section>
+      </footer>
     </main>
-</body>
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>
